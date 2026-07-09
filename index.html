@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Jenish Joshi — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav id="navbar">
+  <div class="nav-logo">J<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
+</nav>
+
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <svg class="float-shape" style="top:20%;right:15%;width:120px;" viewBox="0 0 120 120"><polygon points="60,0 120,120 0,120" fill="none" stroke="#00c8ff" stroke-width="1.5"/></svg>
+  <svg class="float-shape" style="top:60%;right:30%;width:80px;animation-delay:2s;" viewBox="0 0 80 80"><rect x="5" y="5" width="70" height="70" fill="none" stroke="#7b5cfa" stroke-width="1.5"/></svg>
+  <svg class="float-shape" style="top:35%;left:5%;width:60px;animation-delay:4s;" viewBox="0 0 60 60"><circle cx="30" cy="30" r="25" fill="none" stroke="#00ffb3" stroke-width="1.5"/></svg>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      OPEN TO WORK · AHMEDABAD, INDIA
+    </div>
+    <h1 class="hero-name">
+      Jenish<br><span class="accent">Joshi</span>
+    </h1>
+    <p class="hero-title">
+      <span id="typed"></span><span class="typed-cursor">|</span>
+    </p>
+    <p class="hero-desc">
+      Full Stack Developer & UI/UX Designer with hands-on industry experience building responsive web apps and clean, user-focused interfaces. 
+    </p>
+  </div>
+
+  <div class="hero-scroll">
+    <span>SCROLL</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-img-wrap">
+    <div class="about-img-frame">
+      <div class="avatar-placeholder">JJ</div>
+    </div>
+    <div class="about-img-accent"></div>
+    <div class="about-img-accent2"></div>
+    <div class="avail-badge">
+      <span class="badge-dot"></span>
+      Available for Opportunities
+    </div>
+  </div>
+  <div>
+    <p class="about-label reveal">About Me</p>
+    <div class="divider reveal"></div>
+    <h2 class="section-title reveal">Designing & Building<br>Digital Experiences</h2>
+    <p class="about-text reveal">
+      I'm a B.Tech CSE final-year student at Indus University, Ahmedabad, also holding a Diploma in Computer Engineering from Dr. Subhash University. I love sitting at the intersection of design and engineering.
+    </p>
+    <p class="about-text reveal reveal-delay-1">
+      At Elsner Technologies, I work as an Interface Specialist & Frontend Developer — designing Figma prototypes, building responsive UIs, and collaborating with cross-functional teams. Outside work, I develop Flutter apps and explore Computer Vision with OpenCV.
+    </p>
+    <p class="about-text reveal reveal-delay-2">
+      I'm fluent in English, Hindi, and Gujarati, and I'm open to on-site, hybrid, or remote roles.
+    </p>
+    <div class="about-stats">
+      <div class="stat-card reveal">
+        <div class="stat-num">2+</div>
+        <div class="stat-label">Years Exp.</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-1">
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Projects</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-2">
+        <div class="stat-num">3+</div>
+        <div class="stat-label">Companies</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <p class="about-label reveal">What I Know</p>
+  <div class="divider reveal"></div>
+  <h2 class="section-title reveal">Technical Skills</h2>
+
+  <div class="skills-grid">
+    <div class="skill-cat reveal">
+      <div class="skill-cat-icon">🎨</div>
+      <div class="skill-cat-title">Frontend</div>
+      <div class="skill-pills">
+        <span class="pill">HTML</span><span class="pill">CSS</span>
+        <span class="pill">JavaScript</span><span class="pill">TypeScript</span>
+        <span class="pill">React</span><span class="pill">Angular</span>
+      </div>
+    </div>
+    <div class="skill-cat reveal reveal-delay-1">
+      <div class="skill-cat-icon">📱</div>
+      <div class="skill-cat-title">Mobile</div>
+      <div class="skill-pills">
+        <span class="pill purple">Flutter</span><span class="pill purple">Android</span>
+        <span class="pill purple">Android Studio</span>
+        <span class="pill purple">Cross-Platform</span>
+      </div>
+    </div>
+    <div class="skill-cat reveal reveal-delay-2">
+      <div class="skill-cat-icon">⚙️</div>
+      <div class="skill-cat-title">Backend & Tools</div>
+      <div class="skill-pills">
+        <span class="pill green">Python</span><span class="pill green">Node.js</span>
+        <span class="pill green">Git</span><span class="pill green">VS Code</span>
+      </div>
+    </div>
+    <div class="skill-cat reveal reveal-delay-1">
+      <div class="skill-cat-icon">✏️</div>
+      <div class="skill-cat-title">Design</div>
+      <div class="skill-pills">
+        <span class="pill">Figma</span><span class="pill">UI/UX</span>
+      </div>
+    </div>
+    <div class="skill-cat reveal reveal-delay-2">
+      <div class="skill-cat-icon">👁️</div>
+      <div class="skill-cat-title">Computer Vision</div>
+      <div class="skill-pills">
+        <span class="pill purple">OpenCV</span>
+        <span class="pill purple">Computer Vision</span>
+        <span class="pill purple">Image Processing</span>
+      </div>
+    </div>
+    <div class="skill-cat reveal reveal-delay-3">
+      <div class="skill-cat-icon">🌐</div>
+      <div class="skill-cat-title">Languages</div>
+      <div class="skill-pills">
+        <span class="pill green">English</span>
+        <span class="pill green">Hindi</span>
+        <span class="pill green">Gujarati</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <p class="about-label reveal">Work History</p>
+  <div class="divider reveal"></div>
+  <h2 class="section-title reveal">Experience</h2>
+
+  <div class="exp-timeline" style="max-width:720px;margin-top:60px;">
+    <div class="exp-item reveal">
+      <div class="exp-date">JUL 2024 – PRESENT</div>
+      <div class="exp-role">Interface Specialist</div>
+      <div class="exp-company">Elsner Technologies Pvt. Ltd. · Ahmedabad, India</div>
+      <ul class="exp-bullets">
+        <li>Designed UI screens and interactive Figma prototypes for multiple client projects, improving design-to-development handoff efficiency.</li>
+        <li>Collaborated closely with developers to ensure accurate implementation of designs across platforms.</li>
+        <li>Reviewed and provided feedback on junior designers' work prior to handoff to the development team.</li>
+      </ul>
+    </div>
+    <div class="exp-item reveal">
+      <div class="exp-date">OCT 2024 – JAN 2025</div>
+      <div class="exp-role">Frontend Developer</div>
+      <div class="exp-company">Elsner Technologies Pvt. Ltd. · Ahmedabad, India</div>
+      <ul class="exp-bullets">
+        <li>Built responsive web pages using HTML, CSS, and JavaScript, tested across multiple browsers for cross-compatibility.</li>
+        <li>Collaborated with backend team to integrate REST APIs and resolve layout bugs during sprint reviews.</li>
+      </ul>
+    </div>
+    <div class="exp-item reveal">
+      <div class="exp-date">SEP 2024 – FEB 2025</div>
+      <div class="exp-role">Development Intern</div>
+      <div class="exp-company">Mind Solutions · Gujarat, India</div>
+      <ul class="exp-bullets">
+        <li>Authored Python scripts to automate repetitive internal tasks, saving the team significant manual effort each week.</li>
+        <li>Assisted with frontend feature development, debugging, and testing workflows prior to staging releases.</li>
+      </ul>
+    </div>
+    <div class="exp-item reveal">
+      <div class="exp-date">2023 – PRESENT</div>
+      <div class="exp-role">Mobile App Developer – Flutter & Android</div>
+      <div class="exp-company">Personal Projects & Freelance</div>
+      <ul class="exp-bullets">
+        <li>Built cross-platform mobile applications in Flutter targeting both Android and iOS from a single codebase.</li>
+        <li>Developed native Android apps using Android SDK, Material Design, and Jetpack libraries.</li>
+        <li>Handled API integration, local storage, and state management across multiple Flutter projects.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <p class="about-label reveal">What I've Built</p>
+  <div class="divider reveal"></div>
+  <h2 class="section-title reveal">Featured Projects</h2>
+  <p style="color:var(--muted);font-size:0.85rem;margin-top:12px;font-family:'Space Mono',monospace;" class="reveal">
+    ↳ Replace these with your actual projects!
+  </p>
+
+  <div class="projects-grid">
+    <div class="project-card reveal">
+      <span class="project-num">01</span>
+      <span class="project-tag">Flutter · Mobile App</span>
+      <h3 class="project-name">Flutter Cross-Platform App</h3>
+      <p class="project-desc">A fully cross-platform mobile application built in Flutter targeting both Android and iOS from a single codebase, with API integration and state management.</p>
+      <div class="project-tech">
+        <span class="tech-tag">Flutter</span>
+        <span class="tech-tag">Dart</span>
+        <span class="tech-tag">REST API</span>
+        <span class="tech-tag">Android</span>
+        <span class="tech-tag">iOS</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/Jenish1210" class="project-link" target="_blank">↗ GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal reveal-delay-1">
+      <span class="project-num">02</span>
+      <span class="project-tag">Python · Computer Vision</span>
+      <h3 class="project-name">Computer Vision Project</h3>
+      <p class="project-desc">An image processing and computer vision project using OpenCV and Python, exploring real-world object detection and visual analysis workflows.</p>
+      <div class="project-tech">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">OpenCV</span>
+        <span class="tech-tag">Computer Vision</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/Jenish1210" class="project-link" target="_blank">↗ GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal reveal-delay-2">
+      <span class="project-num">03</span>
+      <span class="project-tag">React · Web App</span>
+      <h3 class="project-name">React Frontend Project</h3>
+      <p class="project-desc">A responsive web application built with React and TypeScript, featuring clean UI design, REST API integration, and component-driven architecture.</p>
+      <div class="project-tech">
+        <span class="tech-tag">React</span>
+        <span class="tech-tag">TypeScript</span>
+        <span class="tech-tag">CSS</span>
+        <span class="tech-tag">REST API</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/Jenish1210" class="project-link" target="_blank">↗ GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal reveal-delay-1">
+      <span class="project-num">04</span>
+      <span class="project-tag">Figma · UI/UX Design</span>
+      <h3 class="project-name">Client UI Design System</h3>
+      <p class="project-desc">Designed comprehensive UI screens and interactive Figma prototypes for client projects at Elsner Technologies, including design systems and handoff documentation.</p>
+      <div class="project-tech">
+        <span class="tech-tag">Figma</span>
+        <span class="tech-tag">UI/UX</span>
+        <span class="tech-tag">Prototyping</span>
+        <span class="tech-tag">Design System</span>
+      </div>
+      <div class="project-links">
+        <a href="https://linkedin.com/in/jenish-joshi-52bb55249" class="project-link" target="_blank">↗ LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal reveal-delay-2">
+      <span class="project-num">05</span>
+      <span class="project-tag">Python · Automation</span>
+      <h3 class="project-name">Task Automation Scripts</h3>
+      <p class="project-desc">Python scripts developed during internship at Mind Solutions to automate repetitive internal tasks, significantly reducing manual effort for the team each week.</p>
+      <div class="project-tech">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Automation</span>
+        <span class="tech-tag">Scripting</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/Jenish1210" class="project-link" target="_blank">↗ GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal reveal-delay-3" style="border-style:dashed;display:flex;align-items:center;justify-content:center;min-height:250px;flex-direction:column;gap:12px;">
+      <span style="font-size:2rem;opacity:0.3;">+</span>
+      <p style="color:var(--muted);font-family:'Space Mono',monospace;font-size:0.8rem;text-align:center;padding:0 20px;">More projects on GitHub →</p>
+      <a href="https://github.com/Jenish1210" target="_blank" class="btn-ghost" style="font-size:0.78rem;padding:10px 20px;">View GitHub</a>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <p class="about-label reveal">Academic Background</p>
+  <div class="divider reveal"></div>
+  <h2 class="section-title reveal">Education</h2>
+
+  <div class="edu-grid">
+    <div class="edu-card reveal">
+      <div class="edu-year">2022 – PRESENT</div>
+      <div class="edu-degree">B.Tech – Computer Science & Engineering</div>
+      <div class="edu-school">Indus University · Ahmedabad, India</div>
+      <div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:8px;">
+        <span class="pill" style="font-size:0.65rem;">Full Stack Dev</span>
+        <span class="pill" style="font-size:0.65rem;">Distributed Systems</span>
+        <span class="pill" style="font-size:0.65rem;">Computer Vision</span>
+      </div>
+    </div>
+    <div class="edu-card reveal reveal-delay-1">
+      <div class="edu-year">2022 – 2024</div>
+      <div class="edu-degree">Diploma – Computer Engineering</div>
+      <div class="edu-school">Dr. Subhash University · Gujarat, India</div>
+      <div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:8px;">
+        <span class="pill purple" style="font-size:0.65rem;">Programming</span>
+        <span class="pill purple" style="font-size:0.65rem;">Networking</span>
+        <span class="pill purple" style="font-size:0.65rem;">Database</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <p class="about-label reveal">Let's Connect</p>
+  <div class="divider reveal"></div>
+  <h2 class="section-title reveal">Get In Touch</h2>
+  <p style="color:var(--muted);font-size:0.95rem;margin-top:8px;max-width:480px;" class="reveal">
+    Have a project in mind or want to collaborate? Fill out the form and I'll get back to you as soon as I can.
+  </p>
+
+  <div class="contact-wrap">
+    <div class="reveal">
+      <div class="contact-info-item">
+        
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-icon">✉️</div>
+        <div>
+          <div class="contact-info-label">Email</div>
+          <div class="contact-info-value"><a href="mailto:jenishjoshi1210@gmail.com">jenishjoshi1210@gmail.com</a></div>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="contact-info-label">Location</div>
+          <div class="contact-info-value">Ahmedabad, Gujarat, India</div>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-icon">💼</div>
+        <div>
+          <div class="contact-info-label">LinkedIn</div>
+          <div class="contact-info-value"><a href="https://linkedin.com/in/jenish-joshi-52bb55249" target="_blank">linkedin/jenish-joshi</a></div>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-icon">🐙</div>
+        <div>
+          <div class="contact-info-label">GitHub</div>
+          <div class="contact-info-value"><a href="https://github.com/Jenish1210" target="_blank">github/Jenish1210</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal reveal-delay-1">
+      <div class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Your Name *</label>
+            <input class="form-input" type="text" id="fname" placeholder="*****" required/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email *</label>
+            <input class="form-input" type="email" id="femail" placeholder="*****@gmail.com" required/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Phone</label>
+            <input class="form-input" type="tel" id="fphone" placeholder="+91 00000 00000"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Subject</label>
+            <input class="form-input" type="text" id="fsubject" placeholder="Project / Opportunity / Freelance"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message *</label>
+          <textarea class="form-textarea" id="fmessage" placeholder="Tell me about your project, opportunity, or just say hello!" required></textarea>
+        </div>
+        <button class="form-submit" onclick="submitForm()">Send Message →</button>
+        <div class="form-success" id="formSuccess">
+          ✓ Message sent! I'll get back to you within 24 hours.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Jenish Joshi</div>
+  <div class="footer-copy">© 2026 Jenish Joshi · </div>
+  <div class="footer-socials">
+    <a href="https://github.com/Jenish1210" target="_blank" class="social-btn" title="GitHub">GH</a>
+    <a href="https://linkedin.com/in/jenish-joshi-52bb55249" target="_blank" class="social-btn" title="LinkedIn">IN</a>
+    <a href="mailto:jenishjoshi1210@gmail.com" class="social-btn" title="Email">✉</a>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
