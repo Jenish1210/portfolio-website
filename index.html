@@ -9,6 +9,60 @@
 <style>
   /* Custom cursor dot/ring turned off site-wide */
   .cursor, .cursor-ring { display: none !important; }
+
+  /* Resume dropdown — two download choices (ATS-friendly / Premium design) */
+  .resume-dropdown { position: relative; display: inline-block; }
+  .resume-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    min-width: 250px;
+    background: #0b1220;
+    border: 1px solid rgba(123,92,250,0.35);
+    border-radius: 12px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.45);
+    padding: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity .18s ease, transform .18s ease, visibility .18s;
+    z-index: 999;
+  }
+  .resume-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+  .resume-menu a {
+    display: block;
+    text-decoration: none;
+    padding: 12px 14px;
+    border-radius: 8px;
+    color: #f4f6fb;
+    transition: background .15s ease;
+  }
+  .resume-menu a:hover { background: rgba(0,200,255,0.1); }
+  .resume-menu .r-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 0.92rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .resume-menu .r-sub {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    color: #8b93a7;
+    margin-top: 3px;
+    line-height: 1.4;
+  }
+  .resume-menu .r-tag {
+    font-size: 0.6rem;
+    font-family: 'Space Mono', monospace;
+    padding: 2px 7px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+  }
+  .resume-menu .r-tag.ats { background: rgba(0,255,179,0.12); color: #00ffb3; border: 1px solid rgba(0,255,179,0.3); }
+  .resume-menu .r-tag.premium { background: rgba(123,92,250,0.15); color: #b7a4ff; border: 1px solid rgba(123,92,250,0.35); }
+  .resume-menu .r-divider { height: 1px; background: rgba(255,255,255,0.08); margin: 4px 6px; }
 </style>
 </head>
 <body>
@@ -26,7 +80,20 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
   <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
-  <a href="resume/Jenish_Joshi.pdf" download="Jenish_Joshi.pdf" class="btn-ghost" style="text-decoration:none;margin-left:10px;">Resume ↓</a>
+  <div class="resume-dropdown" style="margin-left:10px;">
+    <button class="btn-ghost" onclick="toggleResumeMenu(event,'resumeMenuNav')">Resume ↓</button>
+    <div class="resume-menu" id="resumeMenuNav">
+      <a href="resume/Jenish_Joshi_ATS_Resume.pdf" download="Jenish_Joshi_ATS_Resume.pdf">
+        <div class="r-title">ATS-Friendly <span class="r-tag ats">Recommended for applying</span></div>
+        <div class="r-sub">Plain, single-column layout built to parse cleanly through applicant tracking systems.</div>
+      </a>
+      <div class="r-divider"></div>
+      <a href="resume/Jenish_Joshi_Premium_Resume.pdf" download="Jenish_Joshi_Premium_Resume.pdf">
+        <div class="r-title">Premium Design <span class="r-tag premium">For recruiters &amp; email</span></div>
+        <div class="r-sub">Styled resume matching this portfolio's look — best for direct sharing or LinkedIn.</div>
+      </a>
+    </div>
+  </div>
 </nav>
 
 <section id="hero">
@@ -48,10 +115,23 @@
       <span id="typed"></span><span class="typed-cursor">|</span>
     </p>
     <p class="hero-desc">
-      Frontend Developer & UI/UX Design Intern with hands-on internship experience building responsive web interfaces and user-focused designs — currently growing my skills in Data Analytics and QA Testing.
+      Frontend Developer & UI/UX Design Intern turned aspiring Business Analyst — I bring hands-on internship experience building responsive web interfaces and user-focused designs, plus four self-built BI dashboards and working knowledge of SQL, Excel, and Power BI, into data-driven, AI-powered insights.
     </p>
     <div class="hero-cta" style="display:flex;gap:16px;margin-top:32px;flex-wrap:wrap;">
-      <a href="resume/Jenish_Joshi.pdf" download="Jenish_Joshi.pdf" class="nav-cta" style="text-decoration:none;display:inline-block;">Download Resume ↓</a>
+      <div class="resume-dropdown">
+        <button class="nav-cta" onclick="toggleResumeMenu(event,'resumeMenuHero')">Download Resume ↓</button>
+        <div class="resume-menu" id="resumeMenuHero">
+          <a href="resume/Jenish_Joshi_ATS_Resume.pdf" download="Jenish_Joshi_ATS_Resume.pdf">
+            <div class="r-title">ATS-Friendly <span class="r-tag ats">Recommended for applying</span></div>
+            <div class="r-sub">Plain, single-column layout built to parse cleanly through applicant tracking systems.</div>
+          </a>
+          <div class="r-divider"></div>
+          <a href="resume/Jenish_Joshi_Premium_Resume.pdf" download="Jenish_Joshi_Premium_Resume.pdf">
+            <div class="r-title">Premium Design <span class="r-tag premium">For recruiters &amp; email</span></div>
+            <div class="r-sub">Styled resume matching this portfolio's look — best for direct sharing or LinkedIn.</div>
+          </a>
+        </div>
+      </div>
       <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
     </div>
   </div>
@@ -83,6 +163,9 @@
     </p>
     <p class="about-text reveal reveal-delay-1">
       I've interned at Elsner Technologies as a UI/UX Design Intern and a Frontend Developer Intern — designing Figma prototypes, building responsive web pages, and collaborating with development teams during design handoff. I've also worked as a Python Development Intern at 1Hold Solutions, automating internal workflows.
+    </p>
+    <p class="about-text reveal reveal-delay-2">
+      Alongside development and design, I'm building a foundation in business analysis and BI — requirements gathering, process mapping, stakeholder coordination, SQL, Excel, and Power BI — while leading a student team on an AI-driven business intelligence platform.
     </p>
     <p class="about-text reveal reveal-delay-2">
       I'm fluent in English, Hindi, and Gujarati, and open to on-site, hybrid, or remote roles. I don't claim to know everything yet, but I bring a strong willingness to learn and consistently put in focused effort — a fast, dependable learner who delivers my best work when given the opportunity to grow.
@@ -160,6 +243,18 @@
         <span class="pill purple">Data Analytics</span>
         <span class="pill purple">QA Testing</span>
         <span class="pill purple">API Testing</span>
+      </div>
+    </div>
+    <div class="skill-cat reveal reveal-delay-1">
+      <div class="skill-cat-icon">📈</div>
+      <div class="skill-cat-title">Business Analysis & BI</div>
+      <div class="skill-pills">
+        <span class="pill">SQL</span>
+        <span class="pill">Power BI</span>
+        <span class="pill">Excel (PivotTables, Data Validation)</span>
+        <span class="pill">Requirements Gathering</span>
+        <span class="pill">Process Mapping</span>
+        <span class="pill">Stakeholder Coordination</span>
       </div>
     </div>
     <div class="skill-cat reveal reveal-delay-1">
@@ -391,10 +486,6 @@
   <div class="contact-wrap">
     <div class="reveal">
       <div class="contact-info-item">
-        
-      </div>
-      <div class="contact-info-item">
-        <div class="contact-icon">✉️</div>
         <div>
           <div class="contact-info-label">Email</div>
           <div class="contact-info-value"><a href="mailto:jenishjoshi1210@gmail.com">jenishjoshi1210@gmail.com</a></div>
@@ -468,6 +559,19 @@
   </div>
 </footer>
 
+<script>
+  // Resume download dropdown — two choices: ATS-friendly / Premium design
+  function toggleResumeMenu(e, id) {
+    e.stopPropagation();
+    document.querySelectorAll('.resume-menu').forEach(function(menu){
+      if (menu.id !== id) menu.classList.remove('open');
+    });
+    document.getElementById(id).classList.toggle('open');
+  }
+  document.addEventListener('click', function(){
+    document.querySelectorAll('.resume-menu').forEach(function(menu){ menu.classList.remove('open'); });
+  });
+</script>
 <script src="js/script.js"></script>
 </body>
 </html>
