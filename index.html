@@ -10,6 +10,13 @@
   /* Custom cursor dot/ring turned off site-wide */
   .cursor, .cursor-ring { display: none !important; }
 
+  /* FIX: style.css sets `cursor:none` on the page for the custom cursor above.
+     Since that custom cursor is disabled, restore the normal system cursor everywhere. */
+  html, body, section, div, p, span, h1, h2, h3 { cursor: auto !important; }
+  a, button, .btn-ghost, .nav-cta, .form-submit, .project-card, .resume-menu a,
+  input, textarea, .nav-links a, .social-btn, [onclick] { cursor: pointer !important; }
+  input, textarea { cursor: text !important; }
+
   /* Resume dropdown — two download choices (ATS-friendly / Premium design) */
   .resume-dropdown { position: relative; display: inline-block; }
   .resume-menu {
@@ -115,7 +122,7 @@
       <span id="typed"></span><span class="typed-cursor">|</span>
     </p>
     <p class="hero-desc">
-      Frontend Developer & UI/UX Design Intern turned aspiring Business Analyst — I bring hands-on internship experience building responsive web interfaces and user-focused designs, plus four self-built BI dashboards and working knowledge of SQL, Excel, and Power BI, into data-driven, AI-powered insights.
+      I'm not a working professional yet — I'm a final-year B.Tech CSE student — but I've put in real hours: three internships across UI/UX design, frontend development, and Python automation, plus four self-built BI dashboards and working knowledge of SQL, Power BI, and Excel, all building toward a career as a Business Analyst.
     </p>
     <div class="hero-cta" style="display:flex;gap:16px;margin-top:32px;flex-wrap:wrap;">
       <div class="resume-dropdown">
@@ -165,7 +172,7 @@
       I've interned at Elsner Technologies as a UI/UX Design Intern and a Frontend Developer Intern — designing Figma prototypes, building responsive web pages, and collaborating with development teams during design handoff. I've also worked as a Python Development Intern at 1Hold Solutions, automating internal workflows.
     </p>
     <p class="about-text reveal reveal-delay-2">
-      Alongside development and design, I'm building a foundation in business analysis and BI — requirements gathering, process mapping, stakeholder coordination, SQL, Excel, and Power BI — while leading a student team on an AI-driven business intelligence platform.
+      I'll be upfront: I'm not a working professional yet. I'm a final-year student, still early in my career — but I've backed that up with three internships, hands-on leadership as team lead on an AI-driven BI platform, and four analytics dashboards I built end-to-end on my own, using SQL, Excel, Power BI, requirements gathering, and process mapping along the way.
     </p>
     <p class="about-text reveal reveal-delay-2">
       I'm fluent in English, Hindi, and Gujarati, and open to on-site, hybrid, or remote roles. I don't claim to know everything yet, but I bring a strong willingness to learn and consistently put in focused effort — a fast, dependable learner who delivers my best work when given the opportunity to grow.
@@ -194,32 +201,45 @@
 
   <div class="skills-grid">
     <div class="skill-cat reveal">
-      <div class="skill-cat-icon">💻</div>
-      <div class="skill-cat-title">Languages & Frameworks</div>
+      <div class="skill-cat-icon">🧭</div>
+      <div class="skill-cat-title">Business Analysis & AI</div>
       <div class="skill-pills">
+        <span class="pill">Requirements Gathering</span>
+        <span class="pill">Process Mapping</span>
+        <span class="pill">Business Intelligence</span>
+        <span class="pill">Stakeholder Coordination</span>
+        <span class="pill">Agile Project Management</span>
+      </div>
+    </div>
+    <div class="skill-cat reveal reveal-delay-1">
+      <div class="skill-cat-icon">📊</div>
+      <div class="skill-cat-title">Data Analytics & BI Tools</div>
+      <div class="skill-pills">
+        <span class="pill purple">SQL</span>
+        <span class="pill purple">Excel (PivotTables, Formulas, Data Validation)</span>
+        <span class="pill purple">Power BI</span>
+        <span class="pill purple">Python (Pandas, NumPy)</span>
+      </div>
+    </div>
+    <div class="skill-cat reveal reveal-delay-2">
+      <div class="skill-cat-icon">💻</div>
+      <div class="skill-cat-title">Programming & Web</div>
+      <div class="skill-pills">
+        <span class="pill">Python</span><span class="pill">JavaScript</span>
         <span class="pill">HTML5</span><span class="pill">CSS</span>
-        <span class="pill">JavaScript</span><span class="pill">AngularJS</span>
-        <span class="pill">Python</span>
+        <span class="pill">AngularJS</span>
       </div>
     </div>
     <div class="skill-cat reveal reveal-delay-1">
       <div class="skill-cat-icon">⚙️</div>
-      <div class="skill-cat-title">Development</div>
+      <div class="skill-cat-title">Development & Design</div>
       <div class="skill-pills">
         <span class="pill green">Full-Stack Web</span><span class="pill green">Frontend</span>
-        <span class="pill green">Backend</span><span class="pill green">Android Development</span>
-        <span class="pill green">Python GUI</span>
+        <span class="pill green">Backend</span><span class="pill green">Python GUI</span>
+        <span class="pill green">Figma</span>
       </div>
     </div>
     <div class="skill-cat reveal reveal-delay-2">
-      <div class="skill-cat-icon">✏️</div>
-      <div class="skill-cat-title">Design & Tools</div>
-      <div class="skill-pills">
-        <span class="pill">Figma</span><span class="pill">Unreal Engine 5</span>
-        <span class="pill">Jira</span><span class="pill">REST APIs</span>
-      </div>
-    </div>
-    <div class="skill-cat reveal reveal-delay-1">
       <div class="skill-cat-icon">🔧</div>
       <div class="skill-cat-title">Hardware & Firmware</div>
       <div class="skill-pills">
@@ -228,33 +248,15 @@
         <span class="pill purple">ESP-NOW</span>
       </div>
     </div>
-    <div class="skill-cat reveal reveal-delay-2">
-      <div class="skill-cat-icon">🤝</div>
-      <div class="skill-cat-title">Leadership</div>
-      <div class="skill-pills">
-        <span class="pill">Team Leadership</span>
-        <span class="pill">Agile Project Management</span>
-      </div>
-    </div>
     <div class="skill-cat reveal reveal-delay-3">
-      <div class="skill-cat-icon">📊</div>
-      <div class="skill-cat-title">Areas of Interest</div>
+      <div class="skill-cat-icon">✨</div>
+      <div class="skill-cat-title">Also Explored</div>
       <div class="skill-pills">
-        <span class="pill purple">Data Analytics</span>
-        <span class="pill purple">QA Testing</span>
-        <span class="pill purple">API Testing</span>
-      </div>
-    </div>
-    <div class="skill-cat reveal reveal-delay-1">
-      <div class="skill-cat-icon">📈</div>
-      <div class="skill-cat-title">Business Analysis & BI</div>
-      <div class="skill-pills">
-        <span class="pill">SQL</span>
-        <span class="pill">Power BI</span>
-        <span class="pill">Excel (PivotTables, Data Validation)</span>
-        <span class="pill">Requirements Gathering</span>
-        <span class="pill">Process Mapping</span>
-        <span class="pill">Stakeholder Coordination</span>
+        <span class="pill">Unreal Engine 5</span>
+        <span class="pill">Jira</span>
+        <span class="pill">REST APIs</span>
+        <span class="pill">Android Development</span>
+        <span class="pill">QA & API Testing</span>
       </div>
     </div>
     <div class="skill-cat reveal reveal-delay-1">
@@ -486,6 +488,8 @@
   <div class="contact-wrap">
     <div class="reveal">
       <div class="contact-info-item">
+      <div class="contact-info-item">
+        <div class="contact-icon">✉️</div>
         <div>
           <div class="contact-info-label">Email</div>
           <div class="contact-info-value"><a href="mailto:jenishjoshi1210@gmail.com">jenishjoshi1210@gmail.com</a></div>
